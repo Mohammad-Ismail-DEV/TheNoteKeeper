@@ -46,7 +46,7 @@ provider:
 #            - "/*"
 
 # you can define service wide environment variables here
-#  environment:
+#    environment:
 #    variable1: value1
 
 # you can add packaging information here
@@ -60,46 +60,76 @@ provider:
 functions:
     signup:
         handler: handler.signup
-        events:
+        events: [
             -http:
-                path: /api/signup
+                path: /TNK/api/signup
                 method: post
+        ]
+            
     login:
         handler: handler.login
-        events:
+        events: [
             -http:
-                path: /api/login
+                path: /TNK/api/login
                 method: get
-    create:
-        handler: handler.create
-        events:
+        ]
+    
+    logout:
+        handler: handler.logout
+        events: [
             -http:
-                path: /api/create
+                path: /TNK/api/logout
                 method: post
+        ]
+            
+    createNote:
+        handler: handler.createNote
+        events: [
+            -http:
+                path: /TNK/api/createNote
+                method: post
+        ]
+            
+    comment:
+        handler: handler.comment
+        events: [
+            -http:
+                path: /TNK/api/comment
+                method: post
+        ]
+            
     getOwn:
         handler: handler.getOwn
-        events:
+        events: [
             -http:
-                path: /api/getOwn
+                path: /TNK/api/getOwn
                 method: get
+        ]
+            
     getAll:
         handler: handler.getAll
-        events:
+        events: [
             -http:
-                path: /api/getAll
+                path: /TNK/api/getAll
                 method: get
+        ]
+            
     update:
         handler: handler.update
-        events:
+        events: [
             -http:
-                path: /api/update
+                path: /TNK/api/update
                 method: put
+        ]
+            
     delete:
         handler: handler.delete
-        events:
+        events: [
             -http:
-                path: /api/delete
+                path: /TNK/api/delete
                 method: delete
+        ]
+            
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details

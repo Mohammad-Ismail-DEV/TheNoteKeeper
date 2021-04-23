@@ -1,0 +1,17 @@
+.comments {
+    max-height: 0;
+    transition: ease-in-out all 0.5s;
+}
+
+.visible {
+    max-height: 1000px;
+}
+
+.comment {
+    opacity: 1;
+    transition: ease-in-out all 0.5s;
+}
+
+.hidden {
+    opacity: 0;
+}
