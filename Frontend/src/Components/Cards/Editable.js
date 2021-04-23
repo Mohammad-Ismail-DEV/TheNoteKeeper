@@ -72,7 +72,11 @@ export default function Editable(props) {
                             hidden: !showComments,
                         })}
                     >
-                        comment1
+                        <div>comment1</div>
+                        <DeleteIcon
+                            // onClick={handleDeleteNote}
+                            size="small"
+                        ></DeleteIcon>
                     </div>
                     <div
                         className={classNames({
@@ -80,7 +84,11 @@ export default function Editable(props) {
                             hidden: !showComments,
                         })}
                     >
-                        comment1
+                        <div>comment1</div>
+                        <DeleteIcon
+                            // onClick={handleDeleteNote}
+                            size="small"
+                        ></DeleteIcon>
                     </div>
                     <div
                         className={classNames({
